@@ -31,7 +31,7 @@ body {
     color: #333;
     line-height: 1.6;
     padding: 1em 2em;
-    background: linear-gradient(135deg, rgba(255, 240, 245, 0.3), rgba(255, 228, 225, 0.25));
+    background: linear-gradient(135deg, rgba(255, 240, 245, 0.4), rgba(255, 228, 225, 0.4));
     background-size: 400% 400%;
     animation: backgroundAnimation 15s ease infinite;
 }
@@ -39,21 +39,22 @@ body {
 /* Background Animation */
 @keyframes backgroundAnimation {
     0% {
-        background: linear-gradient(135deg, rgba(255, 240, 245, 0.25), rgba(255, 228, 225, 0.25), rgba(240, 255, 240, 0.25), rgba(255, 245, 230, 0.25), rgba(240, 240, 255, 0.25), rgba(255, 240, 245, 0.25), rgba(240, 230, 250, 0.25), rgba(255, 230, 230, 0.25));
+        background: linear-gradient(135deg, rgba(255, 240, 245, 0.4), rgba(255, 228, 225, 0.4), rgba(240, 255, 240, 0.4), rgba(255, 245, 230, 0.4), rgba(240, 240, 255, 0.4), rgba(255, 240, 245, 0.4), rgba(240, 230, 250, 0.4), rgba(255, 230, 230, 0.4));
     }
     25% {
-        background: linear-gradient(135deg, rgba(255, 230, 230, 0.25), rgba(240, 255, 240, 0.25), rgba(255, 240, 245, 0.25), rgba(230, 255, 240, 0.25), rgba(255, 245, 230, 0.25), rgba(240, 240, 255, 0.25), rgba(255, 240, 245, 0.25), rgba(240, 230, 250, 0.25));
+        background: linear-gradient(135deg, rgba(255, 230, 230, 0.4), rgba(240, 255, 240, 0.4), rgba(255, 240, 245, 0.4), rgba(230, 255, 240, 0.4), rgba(255, 245, 230, 0.4), rgba(240, 240, 255, 0.4), rgba(255, 240, 245, 0.4), rgba(240, 230, 250, 0.4));
     }
     50% {
-        background: linear-gradient(135deg, rgba(240, 255, 240, 0.25), rgba(255, 245, 230, 0.25), rgba(255, 230, 230, 0.25), rgba(240, 240, 255, 0.25), rgba(255, 240, 245, 0.25), rgba(230, 255, 240, 0.25), rgba(255, 245, 230, 0.25), rgba(240, 230, 250, 0.25));
+        background: linear-gradient(135deg, rgba(240, 255, 240, 0.4), rgba(255, 245, 230, 0.4), rgba(255, 230, 230, 0.4), rgba(240, 240, 255, 0.4), rgba(255, 240, 245, 0.4), rgba(230, 255, 240, 0.4), rgba(255, 245, 230, 0.4), rgba(240, 230, 250, 0.4));
     }
     75% {
-        background: linear-gradient(135deg, rgba(255, 245, 230, 0.25), rgba(240, 240, 255, 0.25), rgba(255, 240, 245, 0.25), rgba(230, 255, 240, 0.25), rgba(255, 230, 230, 0.25), rgba(255, 240, 245, 0.25), rgba(240, 230, 250, 0.25), rgba(255, 245, 230, 0.25));
+        background: linear-gradient(135deg, rgba(255, 245, 230, 0.4), rgba(240, 240, 255, 0.4), rgba(255, 240, 245, 0.4), rgba(230, 255, 240, 0.4), rgba(255, 230, 230, 0.4), rgba(255, 240, 245, 0.4), rgba(240, 230, 250, 0.4), rgba(255, 245, 230, 0.4));
     }
     100% {
-        background: linear-gradient(135deg, rgba(255, 240, 245, 0.25), rgba(255, 228, 225, 0.25), rgba(240, 255, 240, 0.25), rgba(255, 245, 230, 0.25), rgba(240, 240, 255, 0.25), rgba(255, 240, 245, 0.25), rgba(240, 230, 250, 0.25), rgba(255, 230, 230, 0.25));
+        background: linear-gradient(135deg, rgba(255, 240, 245, 0.4), rgba(255, 228, 225, 0.4), rgba(240, 255, 240, 0.4), rgba(255, 245, 230, 0.4), rgba(240, 240, 255, 0.4), rgba(255, 240, 245, 0.4), rgba(240, 230, 250, 0.4), rgba(255, 230, 230, 0.4));
     }
 }
+
 
 
 /* Main Content Styling */
@@ -167,19 +168,17 @@ h2 {
     left: 0;
     background: linear-gradient(135deg, 
     rgba(255, 182, 193, 0.9) 0%, /* Light Pink */
-    rgba(255, 228, 225, 0.9) 25%, /* Light Peach */
-    rgba(240, 248, 255, 0.9) 50%, /* Alice Blue */
-    rgba(144, 238, 144, 0.5) 75%, /* Light Green */
+    rgba(240, 248, 255, 0.9) 25%, /* Alice Blue */
+    rgba(144, 238, 144, 0.5) 50%, /* Light Green */
+    rgba(255, 228, 225, 0.9) 75%, /* Light Peach */
     rgba(173, 216, 230, 0.9) 100% /* Light Blue */
     );
-    transition: width 0.5s ease; /* Set the transition duration and easing */
+    transition: width 0.4s ease; /* Set the transition duration and easing */
 }
 
 .right-section a:hover::before {
     width: 100%;
 }
-
-
 .timeline-card, .publication-card {
     background: #ffffff;
     padding: 15px;
@@ -192,28 +191,29 @@ h2 {
 
 .timeline {
     position: relative;
-    margin-left: 20px;
+    margin-left: 10px; /* Space for the timeline */
 }
 
 .timeline-item {
     margin-bottom: 15px;
     position: relative;
+    padding-left: 20px; /* Adjusted padding to control space */
 }
 
 .dot {
     width: 10px;
     height: 10px;
-    background-color: #856457;
+    background-color: #fe85a3;
     border-radius: 50%;
     position: absolute;
-    left: -20px;
-    top: 15px;
+    left: 0; /* Align dot to the left edge */
+    top: 50%; /* Center dot vertically */
+    transform: translateY(-50%); /* Perfect vertical centering */
 }
 
 .project-info a {
     text-decoration: none;
     font-size: 1.2em;
-    font-weight: bold;
     color: #333;
     transition: color 0.3s ease;
 }
@@ -225,7 +225,7 @@ h2 {
 .view-more {
     text-align: left;
     margin-top: 10px;
-    margin-left: 20px;
+    margin-left: 30px;
 }
 
 .view-more a {
@@ -237,6 +237,28 @@ h2 {
 .view-more a:hover {
     color: #ff4500;
 }
+
+.arrow-link {
+    text-decoration: none;
+    color: #ff7f50;
+    font-weight: bold;
+    position: relative;
+    padding-right: 20px; /* Space for the arrow */
+}
+
+.arrow-link::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 10px solid #ff7f50;
+    transform: translateY(-50%);
+}
+
 
 /* Header */
 .header {
@@ -303,6 +325,47 @@ h2 {
         width: 100%;
     }
 }
+
+
+/* Greek Text Styling */
+.portfolio-links::before {
+    content: "χαρτοφυλάκιον"; /* Greek for Portfolio */
+    position: absolute;
+    right: 10%;
+    top: 5%;
+    transform: translateY(-50%);
+    font-size: 4em; /* Adjust size as needed */
+    color: rgba(0, 0, 0, 0.058); /* Light grey color */
+    white-space: nowrap;
+}
+
+.timeline-card::before {
+    content: "νέα ἔργα"; /* Greek for Recent Projects */
+    position: absolute;
+    right: 10%;
+    top: 10%;
+    transform: translateY(-50%);
+    font-size: 4em; /* Adjust size as needed */
+    color: rgba(0, 0, 0, 0.058); /* Light grey color */
+    white-space: nowrap;
+}
+
+.publication-card::before {
+    content: "δημοσίευσις"; /* Greek for Publications */
+    position: absolute;
+    right: 10%;
+    top: 10%;
+    transform: translateY(-50%);
+    font-size: 4em; /* Adjust size as needed */
+    color: rgba(0, 0, 0, 0.058); /* Light grey color */
+    white-space: nowrap;
+}
+
+/* Ensure the sections have relative positioning to allow absolute positioning of pseudo-elements */
+.portfolio-links, .timeline-card, .publication-card {
+    position: relative;
+}
+
 
 /* Mobile Styles */
 @media (max-width: 480px) {
