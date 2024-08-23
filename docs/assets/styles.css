@@ -27,8 +27,7 @@ button:hover,
 
 /* Basic styling for the body */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #ffffff;
+    font-family: Tahoma, Geneva, Verdana, sans-serif;
     color: #333;
     line-height: 1.6;
     padding: 1em 2em;
@@ -73,8 +72,10 @@ body {
     background: #ffffff;
     padding: 15px;
     border-radius: 8px;
-    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.2), 0 4px 6px rgba(0, 0, 0, 0.1);
-
+    box-shadow: 
+    0 -1px 1px rgba(0, 0, 0, 0.2), /* Thin line at the top */
+    0 4px 6px rgba(0, 0, 0, 0.2),   /* Existing shadow on the bottom (darker) */
+    0 4px 6px rgba(0, 0, 0, 0.1); 
 }
 
 
@@ -82,10 +83,11 @@ body {
 h2 {
     text-align: right;
     font-size: 2.5em;
-    margin-bottom: 0.5em;
+    margin-bottom: 0.3em;
     color: #333;
     text-transform: uppercase;
     letter-spacing: 1px;
+    margin-right: 1em;
 }
 
 /* Portfolio Links Styles */
@@ -101,15 +103,21 @@ h2 {
 .portfolio-links ul li {
     background: #ffffff;
     border-radius: 8px;
-    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.2), 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 
+    0 -1px 1px rgba(0, 0, 0, 0.2), /* Thin line at the top */
+    0 4px 6px rgba(0, 0, 0, 0.2),   /* Existing shadow on the bottom (darker) */
+    0 4px 6px rgba(0, 0, 0, 0.1); 
     overflow: hidden;
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .portfolio-links ul li:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.2), 0 4px 6px rgba(0, 0, 0, 0.1);
+    transform: translateY(-3px);  
+    box-shadow: 
+    0 -1px 1px rgba(0, 0, 0, 0.2), /* Thin line at the top */
+    0 4px 6px rgba(0, 0, 0, 0.2),   /* Existing shadow on the bottom (darker) */
+    0 4px 6px rgba(0, 0, 0, 0.1); 
     background: linear-gradient(135deg, 
     rgba(255, 182, 193, 0.2) 0%, /* Light Pink */
     rgba(255, 228, 225, 0.2) 25%, /* Light Peach */
@@ -140,7 +148,7 @@ h2 {
     width: 50%;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 1.5em;
 }
 
 /* Right Section Specific Styles */
@@ -176,7 +184,10 @@ h2 {
     background: #ffffff;
     padding: 15px;
     border-radius: 8px;
-    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.2), 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 
+    0 -1px 1px rgba(0, 0, 0, 0.2), /* Thin line at the top */
+    0 4px 6px rgba(0, 0, 0, 0.2),   /* Existing shadow on the bottom (darker) */
+    0 4px 6px rgba(0, 0, 0, 0.1); 
 }
 
 .timeline {
@@ -192,11 +203,11 @@ h2 {
 .dot {
     width: 10px;
     height: 10px;
-    background-color: #ff7f50;
+    background-color: #856457;
     border-radius: 50%;
     position: absolute;
     left: -20px;
-    top: 5px;
+    top: 15px;
 }
 
 .project-info a {
@@ -214,6 +225,7 @@ h2 {
 .view-more {
     text-align: left;
     margin-top: 10px;
+    margin-left: 20px;
 }
 
 .view-more a {
@@ -244,7 +256,6 @@ h2 {
 }
 
 .branding .catchphrase {
-    margin: 2px 0 0;
     font-size: 1em;
     color: #959595;
 }
@@ -254,15 +265,18 @@ h2 {
 }
 
 .contact a {
-    color: #515151;
+    color: #7d7d7d;
     font-size: 1.5em;
     margin-left: 15px;
 }
 
 .contact a:hover {
-    color: #000000;
+    color: #ffffff;
 }
 
+.right-section a::before {
+    color:#000;
+}
 
 /* Tablet Styles (Portrait) */
 @media (max-width: 768px) {
