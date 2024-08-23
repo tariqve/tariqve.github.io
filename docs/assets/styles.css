@@ -35,7 +35,7 @@ body {
 
 /* Basic styling for the body */
 body {
-    font-family: Geneva, Verdana, sans-serif;
+    font-family: serif;
     color: #333;
     line-height: 1.6;
     padding: 1em 2em;
@@ -94,9 +94,9 @@ h2 {
     font-size: 2.5em;
     margin-bottom: 0.3em;
     color: #333;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-right: 1em;
+    letter-spacing: 0.2px;
+    margin-right: 1.1em;
+    font-style: italic;
 }
 
 /* Portfolio Links Styles */
@@ -122,7 +122,7 @@ h2 {
 }
 
 .portfolio-links ul li:hover {
-    transform: translateY(-3px);  
+    transform: translateY(-2px);  
     box-shadow: 
     0 -1px 1px rgba(0, 0, 0, 0.2), /* Thin line at the top */
     0 4px 6px rgba(0, 0, 0, 0.2),   /* Existing shadow on the bottom (darker) */
@@ -154,7 +154,7 @@ h2 {
 
 /* Right Section with Timeline and Publication Cards */
 .right-section {
-    width: 50%;
+    width: 53%;
     display: flex;
     flex-direction: column;
     gap: 1.5em;
@@ -339,8 +339,8 @@ h2 {
 .portfolio-links::before {
     content: "χαρτοφυλάκιον"; /* Greek for Portfolio */
     position: absolute;
-    right: 10%;
-    top: 5%;
+    right: 5%;
+    top: 0.5em;
     transform: translateY(-50%);
     font-size: 4em; /* Adjust size as needed */
     color: rgba(0, 0, 0, 0.058); /* Light grey color */
@@ -348,10 +348,10 @@ h2 {
 }
 
 .timeline-card::before {
-    content: "νέα ἔργα"; /* Greek for Recent Projects */
+    content: "πρόσφατα έργα"; /* Greek for Recent Projects */
     position: absolute;
-    right: 10%;
-    top: 10%;
+    right: 5%;
+    top: 0.5em;
     transform: translateY(-50%);
     font-size: 4em; /* Adjust size as needed */
     color: rgba(0, 0, 0, 0.058); /* Light grey color */
@@ -359,10 +359,10 @@ h2 {
 }
 
 .publication-card::before {
-    content: "δημοσίευσις"; /* Greek for Publications */
+    content: "δημοσιεύσεις"; /* Greek for Publications */
     position: absolute;
-    right: 10%;
-    top: 10%;
+    right: 5%;
+    top: 0.5em;
     transform: translateY(-50%);
     font-size: 4em; /* Adjust size as needed */
     color: rgba(0, 0, 0, 0.058); /* Light grey color */
@@ -372,6 +372,7 @@ h2 {
 /* Ensure the sections have relative positioning to allow absolute positioning of pseudo-elements */
 .portfolio-links, .timeline-card, .publication-card {
     position: relative;
+    overflow: hidden; /* Prevent overflow of pseudo-elements */
 }
 
 
@@ -402,3 +403,24 @@ h2 {
         width: 100%;
     }
 }
+
+/* Footer styling */
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(240, 240, 240, 0.85); /* Light grey with transparency */
+    color: rgba(100, 100, 100, 0.75); /* Dark grey with transparency */
+    text-align: left;
+    padding: 5px 50px;
+    font-size: 0.7em;
+    border-top: 0.5px solid rgba(200, 200, 200, 0.6); /* Light grey border with transparency */
+}
+
+.footer p {
+    margin: 0;
+    padding: 0;
+}
+
+
