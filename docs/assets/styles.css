@@ -31,7 +31,7 @@ body {
     background: #ffffff;
     color: #333;
     line-height: 1.6;
-    padding: 2em;
+    padding: 1em 2em;
     background: linear-gradient(135deg, rgba(255, 240, 245, 0.3), rgba(255, 228, 225, 0.25));
     background-size: 400% 400%;
     animation: backgroundAnimation 15s ease infinite;
@@ -160,9 +160,9 @@ h2 {
     background: linear-gradient(135deg, 
     rgba(255, 182, 193, 0.9) 0%, /* Light Pink */
     rgba(255, 228, 225, 0.9) 25%, /* Light Peach */
-    rgba(240, 248, 255, 0.9) 75%, /* Alice Blue */
-    rgba(144, 238, 144, 0.5) 100%, /* Light Green */
-    rgba(173, 216, 230, 0.9) 50%, /* Light Blue */
+    rgba(240, 248, 255, 0.9) 50%, /* Alice Blue */
+    rgba(144, 238, 144, 0.5) 75%, /* Light Green */
+    rgba(173, 216, 230, 0.9) 100% /* Light Blue */
     );
     transition: width 0.5s ease; /* Set the transition duration and easing */
 }
