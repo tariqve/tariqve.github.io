@@ -7,12 +7,23 @@ body, h1, h2, p, ul, li {
 
 /* Basic styling for the body */
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #f4f4f4;
     color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    line-height: 1.6;
 }
 
+/* Prevent text selection */
+body {
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently supported by Chrome, Opera, and Edge */
+  }
+  
 /* Container to center content and add padding */
 .container {
     max-width: 900px;
@@ -20,74 +31,92 @@ body {
     padding: 20px;
 }
 
-/* Header styling */
+
+/* Header */
 .header {
-    text-align: center;
-    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
 }
 
-.header h1 {
-    font-size: 2.5em;
-    color: #333;
+.branding {
+    text-align: left;
 }
 
-.header .catchphrase {
+.branding h1 {
+    margin: 0;
+    font-size: 3em;
+}
+
+.branding .catchphrase {
+    margin: 5px 0 0;
     font-size: 1.2em;
-    color: #555;
-    margin-top: 10px;
+    color: #666;
 }
 
-/* Main content styling */
-.main-content {
-    background: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Contact section styling */
 .contact {
-    margin-bottom: 20px;
-}
-
-.contact h2 {
-    font-size: 1.8em;
-    color: #333;
-}
-
-.contact p {
-    font-size: 1em;
+    text-align: right;
 }
 
 .contact a {
-    color: #1e90ff;
-    text-decoration: none;
+    color: #333;
+    font-size: 1.5em;
+    margin-left: 15px;
+    transition: color 0.3s ease;
 }
 
 .contact a:hover {
-    text-decoration: underline;
+    color: #0073e6;
 }
+
 
 /* Portfolio links styling */
-.portfolio-links h2 {
-    font-size: 1.8em;
+/* General Styles */
+h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 30px;
     color: #333;
-    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
+/* Portfolio Links Styles */
 .portfolio-links ul {
-    list-style-type: none;
+    list-style: none;
+    padding: 0;
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
-.portfolio-links li {
-    margin-bottom: 10px;
+.portfolio-links ul li {
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
 }
 
-.portfolio-links a {
-    color: #1e90ff;
+.portfolio-links ul li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.portfolio-links ul li a {
+    display: block;
+    padding: 15px 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
     text-decoration: none;
+    transition: color 0.3s ease;
 }
 
-.portfolio-links a:hover {
-    text-decoration: underline;
+.portfolio-links ul li a:hover {
+    color: #0073e6;
 }
+
