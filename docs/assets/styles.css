@@ -1,11 +1,4 @@
 /* Reset some default styles */
-body, h1, h2, p, ul, li {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-
 * {
     margin: 0;
     padding: 0;
@@ -31,107 +24,74 @@ button:hover,
     color: inherit !important;
 }
 
-input,
-textarea,
-button,
-select,
-a {
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-}
-
-a:focus,
-a:visited,
-a:active {
-    text-decoration: none;
-    outline: none;
-    color: inherit;
-}
 
 /* Basic styling for the body */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, 
-    rgba(255, 182, 193, 0.1) 0%, /* Light Pink */
-    rgba(255, 228, 225, 0.1) 25%, /* Light Peach */
-    rgba(173, 216, 230, 0.1) 50%, /* Light Blue */
-    rgba(240, 248, 255, 0.1) 75%, /* Alice Blue */
-    rgba(144, 238, 144, 0.1) 100% /* Light Green */
-    );
-
+    background: #ffffff;
     color: #333;
     line-height: 1.6;
-    margin: 0;
-    padding: 20px;
-    line-height: 1.6;
+    padding: 2em;
+    background: linear-gradient(135deg, rgba(255, 240, 245, 0.3), rgba(255, 228, 225, 0.25));
+    background-size: 400% 400%;
+    animation: backgroundAnimation 15s ease infinite;
 }
 
-/* Prevent text selection */
-body {
-    -webkit-user-select: none; /* Safari */
-    -moz-user-select: none; /* Firefox */
-    -ms-user-select: none; /* Internet Explorer/Edge */
-    user-select: none; /* Non-prefixed version, currently supported by Chrome, Opera, and Edge */
-  }
-  
-/* Container to center content and add padding */
-.container {
-    max-width: 900px;
-    margin: 0 auto;
+/* Background Animation */
+@keyframes backgroundAnimation {
+    0% {
+        background: linear-gradient(135deg, rgba(255, 240, 245, 0.25), rgba(255, 228, 225, 0.25), rgba(240, 255, 240, 0.25), rgba(255, 245, 230, 0.25), rgba(240, 240, 255, 0.25), rgba(255, 240, 245, 0.25), rgba(240, 230, 250, 0.25), rgba(255, 230, 230, 0.25));
+    }
+    25% {
+        background: linear-gradient(135deg, rgba(255, 230, 230, 0.25), rgba(240, 255, 240, 0.25), rgba(255, 240, 245, 0.25), rgba(230, 255, 240, 0.25), rgba(255, 245, 230, 0.25), rgba(240, 240, 255, 0.25), rgba(255, 240, 245, 0.25), rgba(240, 230, 250, 0.25));
+    }
+    50% {
+        background: linear-gradient(135deg, rgba(240, 255, 240, 0.25), rgba(255, 245, 230, 0.25), rgba(255, 230, 230, 0.25), rgba(240, 240, 255, 0.25), rgba(255, 240, 245, 0.25), rgba(230, 255, 240, 0.25), rgba(255, 245, 230, 0.25), rgba(240, 230, 250, 0.25));
+    }
+    75% {
+        background: linear-gradient(135deg, rgba(255, 245, 230, 0.25), rgba(240, 240, 255, 0.25), rgba(255, 240, 245, 0.25), rgba(230, 255, 240, 0.25), rgba(255, 230, 230, 0.25), rgba(255, 240, 245, 0.25), rgba(240, 230, 250, 0.25), rgba(255, 245, 230, 0.25));
+    }
+    100% {
+        background: linear-gradient(135deg, rgba(255, 240, 245, 0.25), rgba(255, 228, 225, 0.25), rgba(240, 255, 240, 0.25), rgba(255, 245, 230, 0.25), rgba(240, 240, 255, 0.25), rgba(255, 240, 245, 0.25), rgba(240, 230, 250, 0.25), rgba(255, 230, 230, 0.25));
+    }
+}
+
+
+/* Main Content Styling */
+.main-content {
+    display: flex;
+    justify-content: space-between;
     padding: 1em;
 }
 
-
-/* Header */
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1em 0;
+/* Portfolio Links Container Styling */
+.portfolio-links-container {
+    width: 45%;
 }
 
-.branding {
-    text-align: left;
+.portfolio-links {
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.2), 0 4px 6px rgba(0, 0, 0, 0.1);
+
 }
 
-.branding h1 {
-    margin: 0;
-    font-size: 3em;
-}
 
-.branding .catchphrase {
-    margin: 5px 0 0;
-    font-size: 1.2em;
-    color: #666;
-}
-
-.contact {
-    text-align: right;
-}
-
-.contact a {
-    color: #333;
-    font-size: 1.5em;
-    margin-left: 15px;
-}
-
-.contact a:hover {
-    color: #000000;
-}
 /* Portfolio links styling */
 h2 {
-    text-align: center;
+    text-align: right;
     font-size: 2.5em;
-    margin-bottom: 30px;
+    margin-bottom: 0.5em;
     color: #333;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
 }
 
 /* Portfolio Links Styles */
 .portfolio-links ul {
     list-style: none;
     padding: 0;
-    max-width: 600px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -139,19 +99,27 @@ h2 {
 }
 
 .portfolio-links ul li {
-    background-color: rgba(200, 200, 200, 0.15); /* Grey color with slight transparency */
+    background: #ffffff;
     border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.2), 0 4px 6px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .portfolio-links ul li:hover {
-    transform: translateY(-5px);
-    background: #ffffff;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transform: translateY(-4px);
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.2), 0 4px 6px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(135deg, 
+    rgba(255, 182, 193, 0.2) 0%, /* Light Pink */
+    rgba(255, 228, 225, 0.2) 25%, /* Light Peach */
+    rgba(173, 216, 230, 0.2) 50%, /* Light Blue */
+    rgba(240, 248, 255, 0.2) 75%, /* Alice Blue */
+    rgba(144, 238, 144, 0.2) 100% /* Light Green */
+    );
+
 }
+
 
 .portfolio-links ul li a {
     display: block;
@@ -165,4 +133,187 @@ h2 {
 
 .portfolio-links ul li a:hover {
     color: #000000;
+}
+
+/* Right Section with Timeline and Publication Cards */
+.right-section {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Right Section Specific Styles */
+.right-section a {
+    position: relative;
+    text-decoration: none;
+    color: #000; /* Set your desired text color */
+}
+
+.right-section a::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px; /* Set the underline height */
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(135deg, 
+    rgba(255, 182, 193, 0.9) 0%, /* Light Pink */
+    rgba(255, 228, 225, 0.9) 25%, /* Light Peach */
+    rgba(240, 248, 255, 0.9) 75%, /* Alice Blue */
+    rgba(144, 238, 144, 0.5) 100%, /* Light Green */
+    rgba(173, 216, 230, 0.9) 50%, /* Light Blue */
+    );
+    transition: width 0.5s ease; /* Set the transition duration and easing */
+}
+
+.right-section a:hover::before {
+    width: 100%;
+}
+
+
+.timeline-card, .publication-card {
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.2), 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.timeline {
+    position: relative;
+    margin-left: 20px;
+}
+
+.timeline-item {
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background-color: #ff7f50;
+    border-radius: 50%;
+    position: absolute;
+    left: -20px;
+    top: 5px;
+}
+
+.project-info a {
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.project-info a:hover {
+    color: #000;
+}
+
+.view-more {
+    text-align: left;
+    margin-top: 10px;
+}
+
+.view-more a {
+    text-decoration: none;
+    color: #ff7f50;
+    font-weight: bold;
+}
+
+.view-more a:hover {
+    color: #ff4500;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0em 2em;
+}
+
+.branding {
+    text-align: left;
+}
+
+.branding h1 {
+    margin: 0;
+    font-size: 3em;
+}
+
+.branding .catchphrase {
+    margin: 2px 0 0;
+    font-size: 1em;
+    color: #959595;
+}
+
+.contact {
+    text-align: right;
+}
+
+.contact a {
+    color: #515151;
+    font-size: 1.5em;
+    margin-left: 15px;
+}
+
+.contact a:hover {
+    color: #000000;
+}
+
+
+/* Tablet Styles (Portrait) */
+@media (max-width: 768px) {
+    .main-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .portfolio-links-container,
+    .right-section {
+        width: 100%;
+    }
+
+    .portfolio-links-container {
+        margin-bottom: 1em; /* Add margin for spacing */
+    }
+
+    .portfolio-links ul {
+        display: block;
+        gap: 10px;
+    }
+
+    .right-section {
+        width: 100%;
+    }
+}
+
+/* Mobile Styles */
+@media (max-width: 480px) {
+    .header {
+        flex-direction: column;
+        padding: 1em;
+    }
+
+    .branding,
+    .contact {
+        text-align: center;
+        width: 100%;
+    }
+
+    .portfolio-links-container,
+    .right-section {
+        width: 100%;
+    }
+
+    .portfolio-links ul {
+        display: block;
+        gap: 10px;
+    }
+
+    .right-section {
+        width: 100%;
+    }
 }
