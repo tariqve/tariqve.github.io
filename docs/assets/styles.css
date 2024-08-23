@@ -5,10 +5,59 @@ body, h1, h2, p, ul, li {
     box-sizing: border-box;
 }
 
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+a,
+button,
+[role="button"],
+[tabindex] {
+    text-decoration: none !important;
+    outline: none !important;
+    color: inherit !important;
+}
+
+a:hover,
+button:hover,
+[role="button"]:hover,
+[tabindex]:hover {
+    text-decoration: none !important;
+    outline: none !important;
+    color: inherit !important;
+}
+
+input,
+textarea,
+button,
+select,
+a {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+a:focus,
+a:visited,
+a:active {
+    text-decoration: none;
+    outline: none;
+    color: inherit;
+}
+
 /* Basic styling for the body */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f4f4f4;
+    background: linear-gradient(135deg, 
+    rgba(255, 182, 193, 0.1) 0%, /* Light Pink */
+    rgba(255, 228, 225, 0.1) 25%, /* Light Peach */
+    rgba(173, 216, 230, 0.1) 50%, /* Light Blue */
+    rgba(240, 248, 255, 0.1) 75%, /* Alice Blue */
+    rgba(144, 238, 144, 0.1) 100% /* Light Green */
+    );
+
     color: #333;
     line-height: 1.6;
     margin: 0;
@@ -28,7 +77,7 @@ body {
 .container {
     max-width: 900px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 1em;
 }
 
 
@@ -37,7 +86,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 0;
+    padding: 1em 0;
 }
 
 .branding {
@@ -63,16 +112,12 @@ body {
     color: #333;
     font-size: 1.5em;
     margin-left: 15px;
-    transition: color 0.3s ease;
 }
 
 .contact a:hover {
-    color: #0073e6;
+    color: #000000;
 }
-
-
 /* Portfolio links styling */
-/* General Styles */
 h2 {
     text-align: center;
     font-size: 2.5em;
@@ -94,15 +139,17 @@ h2 {
 }
 
 .portfolio-links ul li {
-    background: #ffffff;
+    background-color: rgba(200, 200, 200, 0.15); /* Grey color with slight transparency */
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
     overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .portfolio-links ul li:hover {
     transform: translateY(-5px);
+    background: #ffffff;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
@@ -117,6 +164,5 @@ h2 {
 }
 
 .portfolio-links ul li a:hover {
-    color: #0073e6;
+    color: #000000;
 }
-
