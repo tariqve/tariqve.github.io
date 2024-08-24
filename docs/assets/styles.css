@@ -361,32 +361,6 @@ h2 {
 }
 
 
-/* Tablet Styles (Portrait) */
-@media (max-width: 768px) {
-    .main-content {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .portfolio-links-container,
-    .right-section {
-        width: 100%;
-    }
-
-    .portfolio-links-container {
-        margin-bottom: 1em; /* Add margin for spacing */
-    }
-
-    .portfolio-links ul {
-        display: block;
-        gap: 10px;
-    }
-
-    .right-section {
-        width: 100%;
-    }
-}
-
 
 /* Greek Text Styling */
 .portfolio-links::before {
@@ -429,34 +403,6 @@ h2 {
 }
 
 
-/* Mobile Styles */
-@media (max-width: 480px) {
-    .header {
-        flex-direction: column;
-        padding: 1em;
-    }
-
-    .branding,
-    .contact {
-        text-align: center;
-        width: 100%;
-    }
-
-    .portfolio-links-container,
-    .right-section {
-        width: 100%;
-    }
-
-    .portfolio-links ul {
-        display: block;
-        gap: 10px;
-    }
-
-    .right-section {
-        width: 100%;
-    }
-}
-
 /* Footer styling */
 .footer {
     position:static;
@@ -471,3 +417,39 @@ h2 {
     border-top: 0.5px solid rgba(200, 200, 200, 0.6); /* Light grey border with transparency */
 }
 
+/* Tablet Styles (Portrait) */
+@media (max-width: 650px) {
+    
+    .header {
+        flex-direction: column;
+    }
+
+    .branding,
+    .contact {
+        text-align: center;
+        width: 100%;
+    }
+
+    .main-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .portfolio-links-container {
+        width: 90%;
+        margin-bottom: 1em; /* Add margin for spacing */
+    }
+
+    .portfolio-links ul li {
+        display: block;
+    }
+
+    .portfolio-links-container,
+    .right-section {
+        width: 100%;
+    }
+
+    .right-section {
+        width: 100%;
+    }
+}
