@@ -176,7 +176,7 @@ html, body {
     border-radius: 8px;
     box-shadow: 
     0 -1px 1px rgba(0, 0, 0, 0.2), /* Thin line at the top */
-    0 4px 6px rgba(0, 0, 0, 0.2),   /* Existing shadow on the bottom (darker) */
+    0 4px 6px rgba(0, 0, 0, 0.15),   /* Existing shadow on the bottom (darker) */
     0 4px 6px rgba(0, 0, 0, 0.1); 
 }
 
@@ -206,9 +206,9 @@ h2 {
     background: #ffffff;
     border-radius: 8px;
     box-shadow: 
-    0 -1px 1px rgba(0, 0, 0, 0.2), /* Thin line at the top */
-    0 4px 6px rgba(0, 0, 0, 0.2),   /* Existing shadow on the bottom (darker) */
-    0 4px 6px rgba(0, 0, 0, 0.1); 
+    0 -1px 1px rgba(120, 209, 188, 0.2), /* Thin line at the top */
+    0 2px 3px rgba(209, 112, 112, 0.2),   /* Existing shadow on the bottom (darker) */
+    0 2px 3px rgba(165, 122, 194, 0.1); 
     overflow: hidden;
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
