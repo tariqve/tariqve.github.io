@@ -38,11 +38,24 @@ body {
     font-family: serif;
     color: #333;
     line-height: 1.6;
-    padding: 1em 2em;
     background: linear-gradient(135deg, rgba(255, 240, 245, 0.4), rgba(255, 228, 225, 0.4));
     background-size: 400% 400%;
     animation: backgroundAnimation 15s ease infinite;
 }
+
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
 
 /* Background Animation */
 @keyframes backgroundAnimation {
@@ -65,12 +78,92 @@ body {
 
 
 
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5em 4em;
+    position: relative; /* Ensure child elements are positioned relative to the header */
+}
+
+.branding {
+    text-align: left;
+    position: relative; /* Ensure photo is positioned relative to this container */
+}
+
+.branding h1 {
+    margin: 0;
+    font-size: 3em;
+    position: relative; /* Position relative for z-index to work */
+}
+
+.branding .catchphrase {
+    font-size: 1em;
+    margin-top: -0.5em;
+    margin-left: 0.5em;
+    color: #959595;
+}
+
+.contact {
+    text-align: right;
+}
+
+.contact a {
+    color: #7d7d7d;
+    font-size: 1.5em;
+    margin-left: 15px;
+}
+
+.contact a:hover {
+    color: #ffffff;
+}
+
+
+/* Updated floating-photo class with animation */
+.floating-photo {
+    position: absolute;
+    top: 50%; /* Adjust position to your preference */
+    left: 10%; /* Adjust position to your preference */
+    transform: translate(-50%, -50%) rotate(-25deg); /* Center and tilt */
+    opacity: 0.01; /* Initial opacity for the start of the animation */
+    z-index: -1; /* Ensure photo is below the text */
+    overflow: hidden;
+    pointer-events: none; /* Ensure photo does not interfere with other elements */
+    max-width: 100px; /* Adjust size as needed */
+    max-height: 100px; /* Adjust size as needed */
+    animation: opacityAnimation 8s ease-in-out infinite; /* Apply animation */
+}
+/* Define the keyframes for the opacity animation */
+@keyframes opacityAnimation {
+    0% {
+        opacity: 0.01; /* Start opacity */
+    }
+    25% {
+        opacity: 0.07; /* Start opacity */
+    }
+    50% {
+        opacity: 0.03; /* Midpoint opacity */
+    }
+    75% {
+        opacity: 0.1; /* Start opacity */
+    }
+    100% {
+        opacity: 0.01; /* End opacity */
+    }
+}
+
+
+
 /* Main Content Styling */
 .main-content {
     display: flex;
     justify-content: space-between;
-    padding: 1em;
+    padding: 1em 2em;
+    flex: 1; /* Makes sure this takes up remaining space */
 }
+
 
 /* Portfolio Links Container Styling */
 .portfolio-links-container {
@@ -268,46 +361,6 @@ h2 {
 }
 
 
-/* Header */
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0em 2em;
-}
-
-.branding {
-    text-align: left;
-}
-
-.branding h1 {
-    margin: 0;
-    font-size: 3em;
-}
-
-.branding .catchphrase {
-    font-size: 1em;
-    color: #959595;
-}
-
-.contact {
-    text-align: right;
-}
-
-.contact a {
-    color: #7d7d7d;
-    font-size: 1.5em;
-    margin-left: 15px;
-}
-
-.contact a:hover {
-    color: #ffffff;
-}
-
-.right-section a::before {
-    color:#000;
-}
-
 /* Tablet Styles (Portrait) */
 @media (max-width: 768px) {
     .main-content {
@@ -406,7 +459,7 @@ h2 {
 
 /* Footer styling */
 .footer {
-    position: fixed;
+    position:static;
     bottom: 0;
     left: 0;
     width: 100%;
@@ -417,10 +470,4 @@ h2 {
     font-size: 0.7em;
     border-top: 0.5px solid rgba(200, 200, 200, 0.6); /* Light grey border with transparency */
 }
-
-.footer p {
-    margin: 0;
-    padding: 0;
-}
-
 
