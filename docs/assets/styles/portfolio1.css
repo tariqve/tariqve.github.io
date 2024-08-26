@@ -36,7 +36,7 @@ body {
 html, body {
     height: 100%;
     margin: 0;
-    font-family: serif;
+    font-family: 'Nunito', sans-serif, 'Times New Roman', Times, serif, serif;
     color: #e0e0e0; /* Light color for better readability on dark background */
     line-height: 1.6;
     background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(8, 8, 16, 0.8));
@@ -160,9 +160,10 @@ canvas {
 }
 
 .introduction {
-    padding: 0.5em 3em;
+    padding: 0.5em 1em;
     z-index: 1;
     position: relative;
+    margin-top: 1em;
 }
 
 /* Project Catalog Styles */
@@ -204,7 +205,6 @@ canvas {
 .publication-timeline {
     display: flex;
     flex-direction: column;
-    margin-top: 2em;
     gap: 1em;
 }
 

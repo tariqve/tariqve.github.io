@@ -189,7 +189,8 @@ body {
 h2 {
   text-align: right;
   font-size: 2.5em;
-  margin-bottom: 0.3em;
+  margin-bottom: 0.2em;
+  margin-top: -0.2em;
   color: #333;
   letter-spacing: 0.2px;
   margin-right: 1.1em;
@@ -210,7 +211,7 @@ h2 {
   background: #ffffff;
   border-radius: 8px;
   box-shadow: 
-  0 -1px 1px rgba(120, 209, 188, 0.2), /* Thin line at the top */
+  0 -1px 1px rgba(241, 213, 111, 0.2), /* Thin line at the top */
   0 2px 3px rgba(209, 112, 112, 0.2),   /* Existing shadow on the bottom (darker) */
   0 2px 3px rgba(165, 122, 194, 0.1); 
   overflow: hidden;
