@@ -24,39 +24,6 @@ button:hover,
     color: inherit !important;
 }
 
-/* Prevent text selection globally */
-body {
-    user-select: none; /* Standard syntax */
-    -webkit-user-select: none; /* Safari */
-    -moz-user-select: none; /* Firefox */
-    -ms-user-select: none; /* Internet Explorer/Edge */
-}
-
-
-
-html, body {
-    height: 100%;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-}
-
-.container {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
-/* Basic styling for the body */
-body {
-    font-family: serif;
-    color: #e0e0e0; /* Light color for better readability on dark background */
-    line-height: 1.6;
-    background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(8, 8, 16, 0.8));
-    background-size: 400% 400%;
-    animation: backgroundAnimation 15s ease infinite;
-}
-
 /* Header */
 .header {
     display: flex;
@@ -64,6 +31,7 @@ body {
     align-items: center;
     padding: 0.5em 4em;
     position: relative; /* Ensure child elements are positioned relative to the header */
+    z-index: 1;
 }
 
 .branding {
@@ -98,7 +66,6 @@ body {
     color: #ffffff;
 }
 
-
 /* Updated floating-photo class with animation */
 .floating-photo {
     position: absolute;
@@ -113,6 +80,7 @@ body {
     max-height: 100px; /* Adjust size as needed */
     animation: opacityAnimation 8s ease-in-out infinite; /* Apply animation */
 }
+
 /* Define the keyframes for the opacity animation */
 @keyframes opacityAnimation {
     0% {
@@ -132,16 +100,19 @@ body {
     }
 }
 
-
 /* Summary Styles */
 .summary {
     padding: 0.5em 3em;
+    z-index: 1;
+    position: relative;
 }
 
 /* Main Content Styling */
 .main-content {
     display: flex;
     padding: 1em 2em;
+    z-index: 1;
+    position: relative;
 }
 
 /* Main Container Styling */
@@ -179,4 +150,11 @@ body {
     padding: 5px 50px;
     font-size: 0.7em;
     border-top: 0.5px solid rgba(200, 200, 200, 0.6); /* Light grey border with transparency */
+}
+
+/* Keyframes for background animation */
+@keyframes backgroundAnimation {
+    0% { background-position: 0% 0%; }
+    50% { background-position: 100% 100%; }
+    100% { background-position: 0% 0%; }
 }

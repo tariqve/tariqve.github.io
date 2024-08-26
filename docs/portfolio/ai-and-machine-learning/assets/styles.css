@@ -1,0 +1,350 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+a,
+button,
+[role="button"],
+[tabindex] {
+    text-decoration: none !important;
+    outline: none !important;
+    color: inherit !important;
+}
+
+a:hover,
+button:hover,
+[role="button"]:hover,
+[tabindex]:hover {
+    text-decoration: none !important;
+    outline: none !important;
+    color: inherit !important;
+}
+
+/* Prevent text selection globally */
+body {
+    user-select: none; /* Standard syntax */
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+}
+
+/* Basic styling for the body */
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: serif;
+    color: #e0e0e0; /* Light color for better readability on dark background */
+    line-height: 1.6;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(8, 8, 16, 0.8));
+    background-size: 400% 400%;
+    animation: backgroundAnimation 15s ease infinite;
+}
+
+/* Particle Background */
+#particles-js {
+    position: fixed; /* Ensures the particle background is fixed in the viewport */
+    top: 0;
+    left: 0;
+    width: 100vw; /* Full viewport width */
+    height: 100vh; /* Full viewport height */
+    background: #000;
+    z-index: 0; /* Ensure it's behind other content */
+}
+
+/* Canvas Animation */
+canvas {
+    position: fixed; /* Fixed position for full-page coverage */
+    top: 0;
+    left: 0;
+    width: 100vw; /* Full viewport width */
+    height: 100vh; /* Full viewport height */
+    z-index: -1; /* Ensure it's behind other content */
+}
+
+/* Keyframes for background animation */
+@keyframes backgroundAnimation {
+    0% { background-position: 0% 0%; }
+    50% { background-position: 100% 100%; }
+    100% { background-position: 0% 0%; }
+}
+
+/* Banner Container Styles */
+.banner-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 70%; /* Adjust height as needed */
+}
+
+.banner-slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 300%; /* Adjust based on the number of slides */
+}
+
+.banner-slide {
+    min-width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.banner-content {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: #fff;
+}
+
+.banner-content h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.banner-content p {
+    font-size: 1.2em;
+}
+
+.more-info {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.nav-button.left {
+    left: 10px;
+}
+
+.nav-button.right {
+    right: 10px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 600px;
+}
+
+.modal-close {
+    float: right;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5em 4em;
+    position: relative; /* Ensure child elements are positioned relative to the header */
+    z-index: 1;
+}
+
+.branding {
+    text-align: left;
+    position: relative; /* Ensure photo is positioned relative to this container */
+}
+
+.branding h1 {
+    margin: 0;
+    font-size: 3em;
+    position: relative; /* Position relative for z-index to work */
+}
+
+.branding .catchphrase {
+    font-size: 1em;
+    margin-top: -0.5em;
+    margin-left: 0.5em;
+    color: #959595;
+}
+
+.contact {
+    text-align: right;
+}
+
+.contact a {
+    color: #7d7d7d;
+    font-size: 1.5em;
+    margin-left: 15px;
+}
+
+.contact a:hover {
+    color: #ffffff;
+}
+
+/* Updated floating-photo class with animation */
+.floating-photo {
+    position: absolute;
+    top: 50%; /* Adjust position to your preference */
+    left: 10%; /* Adjust position to your preference */
+    transform: translate(-50%, -50%) rotate(-25deg); /* Center and tilt */
+    opacity: 0.01; /* Initial opacity for the start of the animation */
+    z-index: -1; /* Ensure photo is below the text */
+    overflow: hidden;
+    pointer-events: none; /* Ensure photo does not interfere with other elements */
+    max-width: 100px; /* Adjust size as needed */
+    max-height: 100px; /* Adjust size as needed */
+    animation: opacityAnimation 8s ease-in-out infinite; /* Apply animation */
+}
+
+/* Define the keyframes for the opacity animation */
+@keyframes opacityAnimation {
+    0% {
+        opacity: 0.01; /* Start opacity */
+    }
+    25% {
+        opacity: 0.07; /* Start opacity */
+    }
+    50% {
+        opacity: 0.03; /* Midpoint opacity */
+    }
+    75% {
+        opacity: 0.1; /* Start opacity */
+    }
+    100% {
+        opacity: 0.01; /* End opacity */
+    }
+}
+
+/* Summary Styles */
+.introduction {
+    padding: 0.5em 3em;
+    z-index: 1;
+    position: relative;
+}
+
+/* Main Content Styling */
+.main-container {
+    display: flex;
+    padding: 1em 2em;
+    margin-left: 15%; /* Leave 25% space from the left side */
+    z-index: 1;
+    position: relative;
+    flex: 1; /* Takes up remaining space */
+    flex-direction: column;
+}
+
+/* Project Catalog Styles */
+.project-catalog {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    gap: 1em;
+}
+
+/* Project Item Styles */
+.project-item {
+    background: #1f1d1d;
+    border-radius: 8px;
+    padding: 1em;
+    box-shadow: 
+    0 -1px 1px rgba(120, 209, 188, 0.2), /* Thin line at the top */
+    0 2px 3px rgba(209, 112, 112, 0.2),   /* Existing shadow on the bottom (darker) */
+    0 2px 3px rgba(165, 122, 194, 0.1); 
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-item:hover {
+    transform: translateY(-2px);  
+    box-shadow: 
+    0 -1px 1px rgba(0, 0, 0, 0.2), /* Thin line at the top */
+    0 4px 6px rgba(0, 0, 0, 0.2),   /* Existing shadow on the bottom (darker) */
+    0 4px 6px rgba(0, 0, 0, 0.1); 
+    background: linear-gradient(135deg, 
+    rgba(255, 182, 193, 0.2) 0%, /* Light Pink */
+    rgba(255, 228, 225, 0.2) 25%, /* Light Peach */
+    rgba(173, 216, 230, 0.2) 50%, /* Light Blue */
+    rgba(240, 248, 255, 0.2) 75%, /* Alice Blue */
+    rgba(144, 238, 144, 0.2) 100% /* Light Green */
+    );
+}
+
+/* Publications Styles */
+
+.publication-timeline {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2em;
+    gap: 1em;
+}
+
+.publications {
+    background: #2b2b2b;
+    border-radius: 8px;
+    padding: 1em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: #e0e0e0;
+}
+
+.publications a {
+    font-size: 1.2em;
+    color: #9d9d9d;
+}
+
+.publications a:hover {
+    color: #ffffff;
+}
+
+.publications .date {
+    font-size: 0.9em;
+    color: #7d7d7d;
+}
+
+.view-more {
+    margin-top: 1em;
+    text-align: center;
+}
+
+.view-more a {
+    color: #4a90e2;
+    font-size: 1em;
+}
+
+.view-more a:hover {
+    text-decoration: underline;
+}
+
+/* Footer styling */
+.footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(85, 85, 85, 0.85); /* Light grey with transparency */
+    color: rgba(236, 236, 236, 0.75); /* Dark grey with transparency */
+    text-align: left;
+    padding: 5px 50px;
+    font-size: 0.7em;
+    border-top: 0.5px solid rgba(172, 172, 172, 0.6); /* Light grey border with transparency */
+}

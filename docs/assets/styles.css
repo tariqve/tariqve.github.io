@@ -46,15 +46,19 @@ body {
 html, body {
     height: 100%;
     margin: 0;
+}
+
+body {
     display: flex;
     flex-direction: column;
 }
 
 .container {
+    flex: 1; /* This ensures the container takes up the remaining space */
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
 }
+
 
 
 /* Background Animation */
@@ -244,7 +248,6 @@ h2 {
 .portfolio-links ul li a:hover {
     color: #000000;
 }
-
 /* Right Section with Timeline and Publication Cards */
 .right-section {
     width: 53%;
@@ -265,7 +268,7 @@ h2 {
     position: absolute;
     width: 0;
     height: 2px; /* Set the underline height */
-    bottom: 0;
+    top: 100%; /* Position the underline above the text */
     left: 0;
     background: linear-gradient(135deg, 
     rgba(255, 182, 193, 0.9) 0%, /* Light Pink */
@@ -280,6 +283,7 @@ h2 {
 .right-section a:hover::before {
     width: 100%;
 }
+
 .timeline-card, .publication-card {
     background: #ffffff;
     padding: 15px;
@@ -401,7 +405,6 @@ h2 {
     position: relative;
     overflow: hidden; /* Prevent overflow of pseudo-elements */
 }
-
 
 /* Footer styling */
 .footer {
