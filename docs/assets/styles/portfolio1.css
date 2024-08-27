@@ -71,26 +71,25 @@ canvas {
     50% { background-position: 100% 100%; }
     100% { background-position: 0% 0%; }
 }
-
 /* Header */
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0.5em 4em;
-    position: relative; /* Ensure child elements are positioned relative to the header */
+    position: relative;
     z-index: 1;
 }
 
 .branding {
     text-align: left;
-    position: relative; /* Ensure photo is positioned relative to this container */
+    position: relative;
 }
 
 .branding h1 {
     margin: 0;
     font-size: 3em;
-    position: relative; /* Position relative for z-index to work */
+    position: relative;
 }
 
 .branding .catchphrase {
@@ -114,39 +113,29 @@ canvas {
     color: #ffffff;
 }
 
-/* Updated floating-photo class with animation */
+/* Floating Photo */
 .floating-photo {
     position: absolute;
-    top: 50%; /* Adjust position to your preference */
-    left: 10%; /* Adjust position to your preference */
-    transform: translate(-50%, -50%) rotate(-25deg); /* Center and tilt */
-    opacity: 0.01; /* Initial opacity for the start of the animation */
-    z-index: -1; /* Ensure photo is below the text */
+    top: 50%;
+    left: 10%;
+    transform: translate(-50%, -50%) rotate(-25deg);
+    opacity: 0.01;
+    z-index: -1;
     overflow: hidden;
-    pointer-events: none; /* Ensure photo does not interfere with other elements */
-    max-width: 100px; /* Adjust size as needed */
-    max-height: 100px; /* Adjust size as needed */
-    animation: opacityAnimation 8s ease-in-out infinite; /* Apply animation */
+    pointer-events: none;
+    max-width: 100px;
+    max-height: 100px;
+    animation: opacityAnimation 8s ease-in-out infinite;
 }
 
-/* Define the keyframes for the opacity animation */
+/* Keyframes for opacity animation */
 @keyframes opacityAnimation {
-    0% {
-        opacity: 0.01; /* Start opacity */
-    }
-    25% {
-        opacity: 0.07; /* Start opacity */
-    }
-    50% {
-        opacity: 0.03; /* Midpoint opacity */
-    }
-    75% {
-        opacity: 0.1; /* Start opacity */
-    }
-    100% {
-        opacity: 0.01; /* End opacity */
-    }
+    0%, 100% { opacity: 0.01; }
+    25% { opacity: 0.07; }
+    50% { opacity: 0.03; }
+    75% { opacity: 0.1; }
 }
+
 
 /* Main Content Styling */
 .main-container {

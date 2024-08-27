@@ -3,8 +3,8 @@ const path = require('path');
 module.exports = {
   entry: './src/scripts/ib.js',
   output: {
-    path: path.resolve(__dirname, 'docs/assets'),
-    filename: 'ib.js',
+    path: path.resolve(__dirname, 'docs/assets/scripts'),
+    filename: 'portfolio5ib.js',
   },
   module: {
     rules: [
