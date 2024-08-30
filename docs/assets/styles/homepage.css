@@ -1,46 +1,9 @@
-/* Reset some default styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  -webkit-tap-highlight-color: transparent;
-}
-
-a,
-button,
-[role="button"],
-[tabindex] {
-  text-decoration: none !important;
-  outline: none !important;
-  color: inherit !important;
-}
-
-a:hover,
-button:hover,
-[role="button"]:hover,
-[tabindex]:hover {
-  text-decoration: none !important;
-  outline: none !important;
-  color: inherit !important;
-}
-
-/* Prevent text selection globally */
-body {
-  user-select: none; /* Standard syntax */
-  -webkit-user-select: none; /* Safari */
-  -moz-user-select: none; /* Firefox */
-  -ms-user-select: none; /* Internet Explorer/Edge */
-}
 
 
 /* Basic styling for the body */
 body {
-  font-family: serif;
   color: #333;
-  line-height: 1.6;
-  background: linear-gradient(135deg, rgba(255, 240, 245, 0.4), rgba(255, 228, 225, 0.4));
-  background-size: 400% 400%;
-  animation: backgroundAnimation 15s ease infinite;
+  background: #fff;
 }
 
 html, body {
@@ -61,63 +24,13 @@ body {
 
 
 
-/* Background Animation */
-@keyframes backgroundAnimation {
-  0% {
-      background: linear-gradient(135deg, rgba(255, 240, 245, 0.4), rgba(255, 228, 225, 0.4), rgba(240, 255, 240, 0.4), rgba(255, 245, 230, 0.4), rgba(240, 240, 255, 0.4), rgba(255, 240, 245, 0.4), rgba(240, 230, 250, 0.4), rgba(255, 230, 230, 0.4));
-  }
-  25% {
-      background: linear-gradient(135deg, rgba(255, 230, 230, 0.4), rgba(240, 255, 240, 0.4), rgba(255, 240, 245, 0.4), rgba(230, 255, 240, 0.4), rgba(255, 245, 230, 0.4), rgba(240, 240, 255, 0.4), rgba(255, 240, 245, 0.4), rgba(240, 230, 250, 0.4));
-  }
-  50% {
-      background: linear-gradient(135deg, rgba(240, 255, 240, 0.4), rgba(255, 245, 230, 0.4), rgba(255, 230, 230, 0.4), rgba(240, 240, 255, 0.4), rgba(255, 240, 245, 0.4), rgba(230, 255, 240, 0.4), rgba(255, 245, 230, 0.4), rgba(240, 230, 250, 0.4));
-  }
-  75% {
-      background: linear-gradient(135deg, rgba(255, 245, 230, 0.4), rgba(240, 240, 255, 0.4), rgba(255, 240, 245, 0.4), rgba(230, 255, 240, 0.4), rgba(255, 230, 230, 0.4), rgba(255, 240, 245, 0.4), rgba(240, 230, 250, 0.4), rgba(255, 245, 230, 0.4));
-  }
-  100% {
-      background: linear-gradient(135deg, rgba(255, 240, 245, 0.4), rgba(255, 228, 225, 0.4), rgba(240, 255, 240, 0.4), rgba(255, 245, 230, 0.4), rgba(240, 240, 255, 0.4), rgba(255, 240, 245, 0.4), rgba(240, 230, 250, 0.4), rgba(255, 230, 230, 0.4));
-  }
-}
-
-
-
-
 /* Header */
 .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.5em 4em;
-  position: relative; /* Ensure child elements are positioned relative to the header */
-}
-
-.branding {
-  text-align: left;
-  position: relative; /* Ensure photo is positioned relative to this container */
-}
-
-.branding h1 {
-  margin: 0;
-  font-size: 3em;
-  position: relative; /* Position relative for z-index to work */
-}
-
-.branding .catchphrase {
-  font-size: 1em;
-  margin-top: -0.5em;
-  margin-left: 0.5em;
-  color: #959595;
-}
-
-.contact {
-  text-align: right;
+  background: linear-gradient(to bottom, #f0f0f0 0%, rgba(255, 255, 255, 0.75) 75%, rgba(0, 0, 0, 0) 100%);
 }
 
 .contact a {
   color: #7d7d7d;
-  font-size: 1.5em;
-  margin-left: 15px;
 }
 
 .contact a:hover {
@@ -125,49 +38,14 @@ body {
 }
 
 
-/* Updated floating-photo class with animation */
-.floating-photo {
-  position: absolute;
-  top: 50%; /* Adjust position to your preference */
-  left: 10%; /* Adjust position to your preference */
-  transform: translate(-50%, -50%) rotate(-25deg); /* Center and tilt */
-  opacity: 0.01; /* Initial opacity for the start of the animation */
-  z-index: -1; /* Ensure photo is below the text */
-  overflow: hidden;
-  pointer-events: none; /* Ensure photo does not interfere with other elements */
-  max-width: 100px; /* Adjust size as needed */
-  max-height: 100px; /* Adjust size as needed */
-  animation: opacityAnimation 8s ease-in-out infinite; /* Apply animation */
-}
-/* Define the keyframes for the opacity animation */
-@keyframes opacityAnimation {
-  0% {
-      opacity: 0.01; /* Start opacity */
-  }
-  25% {
-      opacity: 0.07; /* Start opacity */
-  }
-  50% {
-      opacity: 0.03; /* Midpoint opacity */
-  }
-  75% {
-      opacity: 0.1; /* Start opacity */
-  }
-  100% {
-      opacity: 0.01; /* End opacity */
-  }
-}
-
-
-
 /* Main Content Styling */
 .main-content {
   display: flex;
   justify-content: space-between;
+  margin-top: 1em;
   padding: 1em 2em;
   flex: 1; /* Makes sure this takes up remaining space */
 }
-
 
 /* Portfolio Links Container Styling */
 .portfolio-links-container {
@@ -177,11 +55,11 @@ body {
 .portfolio-links {
   background: #ffffff;
   padding: 15px;
-  border-radius: 8px;
+  border-radius: 3px;
   box-shadow: 
   0 -1px 1px rgba(0, 0, 0, 0.2), /* Thin line at the top */
-  0 4px 6px rgba(0, 0, 0, 0.15),   /* Existing shadow on the bottom (darker) */
-  0 4px 6px rgba(0, 0, 0, 0.1); 
+  0 1px 2px rgba(0, 0, 0, 0.15),   /* Existing shadow on the bottom (darker) */
+  0 1px 2px rgba(0, 0, 0, 0.1); 
 }
 
 
@@ -208,35 +86,47 @@ h2 {
 }
 
 .portfolio-links ul li {
+  position: relative; /* Make sure to position relative for the ::before pseudo-element */
   background: #ffffff;
-  border-radius: 8px;
+  border-radius: 4px;
   box-shadow: 
-  0 -1px 1px rgba(241, 213, 111, 0.2), /* Thin line at the top */
-  0 2px 3px rgba(209, 112, 112, 0.2),   /* Existing shadow on the bottom (darker) */
-  0 2px 3px rgba(165, 122, 194, 0.1); 
+    0 -1px 1px rgba(0, 0, 0, 0.2), /* Thin line at the top */
+    0 1px 2px rgba(0, 0, 0, 0.15),   /* Existing shadow on the bottom (darker) */
+    0 1px 2px rgba(0, 0, 0, 0.1); 
   overflow: hidden;
   cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.1s ease, box-shadow 0.3s ease;
 }
 
 .portfolio-links ul li:hover {
   transform: translateY(-2px);  
   box-shadow: 
-  0 -1px 1px rgba(0, 0, 0, 0.2), /* Thin line at the top */
-  0 4px 6px rgba(0, 0, 0, 0.2),   /* Existing shadow on the bottom (darker) */
-  0 4px 6px rgba(0, 0, 0, 0.1); 
-  background: linear-gradient(135deg, 
-  rgba(255, 182, 193, 0.2) 0%, /* Light Pink */
-  rgba(255, 228, 225, 0.2) 25%, /* Light Peach */
-  rgba(173, 216, 230, 0.2) 50%, /* Light Blue */
-  rgba(240, 248, 255, 0.2) 75%, /* Alice Blue */
-  rgba(144, 238, 144, 0.2) 100% /* Light Green */
-  );
+    0 -1px 1px rgba(0, 0, 0, 0.2), /* Thin line at the top */
+    0 4px 6px rgba(0, 0, 0, 0.2),   /* Existing shadow on the bottom (darker) */
+    0 4px 6px rgba(0, 0, 0, 0.1); 
+}
 
+.portfolio-links ul li::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 100%; /* Cover the full height of the li */
+  left: 0;
+  top: 0;
+  background: linear-gradient(135deg, 
+    rgba(200, 200, 200, 0.3) 0%, 
+    rgba(150, 150, 150, 0.3) 100%);
+  transition: 0.3s ease-in-out; /* Smooth width transition */
+  z-index: 0; /* Make sure it’s behind the content */
+}
+
+.portfolio-links ul li:hover::before {
+  width: 100%; /* Expand the underline to full width */
 }
 
 
 .portfolio-links ul li a {
+  position: relative; /* Ensure the link is positioned above the ::before pseudo-element */
   display: block;
   padding: 15px 20px;
   font-size: 1.2em;
@@ -244,11 +134,13 @@ h2 {
   color: #333;
   text-decoration: none;
   transition: color 0.3s ease;
+  z-index: 1; /* Ensure the text is above the ::before pseudo-element */
 }
 
 .portfolio-links ul li a:hover {
   color: #000000;
 }
+
 /* Right Section with Timeline and Publication Cards */
 .right-section {
   width: 53%;
@@ -269,15 +161,11 @@ h2 {
   position: absolute;
   width: 0;
   height: 2px; /* Set the underline height */
-  top: 100%; /* Position the underline above the text */
+  top: 100%; /* Position the underline below the text */
   left: 0;
   background: linear-gradient(135deg, 
-  rgba(255, 182, 193, 0.9) 0%, /* Light Pink */
-  rgba(240, 248, 255, 0.9) 25%, /* Alice Blue */
-  rgba(144, 238, 144, 0.5) 50%, /* Light Green */
-  rgba(255, 228, 225, 0.9) 75%, /* Light Peach */
-  rgba(173, 216, 230, 0.9) 100% /* Light Blue */
-  );
+    rgba(20, 20, 20, 0.9) 0%, 
+    rgba(69, 69, 69, 0.5) 100%);
   transition: width 0.4s ease; /* Set the transition duration and easing */
 }
 
@@ -288,11 +176,11 @@ h2 {
 .timeline-card, .publication-card {
   background: #ffffff;
   padding: 15px;
-  border-radius: 8px;
+  border-radius: 4px;
   box-shadow: 
   0 -1px 1px rgba(0, 0, 0, 0.2), /* Thin line at the top */
-  0 4px 6px rgba(0, 0, 0, 0.2),   /* Existing shadow on the bottom (darker) */
-  0 4px 6px rgba(0, 0, 0, 0.1); 
+  0 1px 2px rgba(0, 0, 0, 0.15),   /* Existing shadow on the bottom (darker) */
+  0 1px 2px rgba(0, 0, 0, 0.1); 
 }
 
 .timeline {
@@ -309,7 +197,7 @@ h2 {
 .dot {
   width: 10px;
   height: 10px;
-  background-color: #fe85a3;
+  background-color: #5e5e5e;
   border-radius: 50%;
   position: absolute;
   left: 0; /* Align dot to the left edge */
@@ -332,39 +220,8 @@ h2 {
   text-align: left;
   margin-top: 10px;
   margin-left: 30px;
-}
-
-.view-more a {
-  text-decoration: none;
-  color: #ff7f50;
   font-weight: bold;
 }
-
-.view-more a:hover {
-  color: #ff4500;
-}
-
-.arrow-link {
-  text-decoration: none;
-  color: #ff7f50;
-  font-weight: bold;
-  position: relative;
-  padding-right: 20px; /* Space for the arrow */
-}
-
-.arrow-link::after {
-  content: '';
-  position: absolute;
-  right: 0;
-  top: 50%;
-  width: 0;
-  height: 0;
-  border-top: 5px solid transparent;
-  border-bottom: 5px solid transparent;
-  border-left: 10px solid #ff7f50;
-  transform: translateY(-50%);
-}
-
 
 
 /* Greek Text Styling */
@@ -409,51 +266,7 @@ h2 {
 
 /* Footer styling */
 .footer {
-  position:static;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background-color: rgba(240, 240, 240, 0.85); /* Light grey with transparency */
+ background-color: rgba(240, 240, 240, 0.85); /* Light grey with transparency */
   color: rgba(100, 100, 100, 0.75); /* Dark grey with transparency */
-  text-align: left;
-  padding: 5px 50px;
-  font-size: 0.7em;
   border-top: 0.5px solid rgba(200, 200, 200, 0.6); /* Light grey border with transparency */
-}
-
-/* Tablet Styles (Portrait) */
-@media (max-width: 650px) {
-  
-  .header {
-      flex-direction: column;
-  }
-
-  .branding,
-  .contact {
-      text-align: center;
-      width: 100%;
-  }
-
-  .main-content {
-      flex-direction: column;
-      align-items: center;
-  }
-
-  .portfolio-links-container {
-      width: 90%;
-      margin-bottom: 1em; /* Add margin for spacing */
-  }
-
-  .portfolio-links ul li {
-      display: block;
-  }
-
-  .portfolio-links-container,
-  .right-section {
-      width: 100%;
-  }
-
-  .right-section {
-      width: 100%;
-  }
 }

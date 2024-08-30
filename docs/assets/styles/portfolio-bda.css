@@ -1,0 +1,122 @@
+
+
+/* Basic styling for the body */
+html, body {
+    font-family: 'Nunito', sans-serif, 'Times New Roman', Times, serif, serif;
+    color: #e0e0e0; /* Light color for better readability on dark background */
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(8, 8, 16, 0.8));
+    background-size: 400% 400%;
+    animation: backgroundAnimation 15s ease infinite;
+}
+
+/* Particle Background */
+#particles-js {
+    position: fixed; /* Ensures the particle background is fixed in the viewport */
+    top: 0;
+    left: 0;
+    width: 100vw; /* Full viewport width */
+    height: 100vh; /* Full viewport height */
+    background: #000;
+    z-index: 0; /* Ensure it's behind other content */
+}
+
+/* Canvas Animation */
+canvas {
+    position: fixed; /* Fixed position for full-page coverage */
+    top: 0;
+    left: 0;
+    width: 100vw; /* Full viewport width */
+    height: 100vh; /* Full viewport height */
+    z-index: -1; /* Ensure it's behind other content */
+}
+
+/* Keyframes for background animation */
+@keyframes backgroundAnimation {
+    0% { background-position: 0% 0%; }
+    50% { background-position: 100% 100%; }
+    100% { background-position: 0% 0%; }
+}
+
+/* Header */
+.header {
+    background: linear-gradient(to bottom, #000 0%, rgba(0, 0, 0, 0.75) 75%, rgba(0, 0, 0, 0) 100%);
+    backdrop-filter: blur(100px) brightness(50%); /* Optional: Apply a blur effect to background */
+}
+
+.contact a:hover {
+    color: #ffffff;
+}
+
+/* Main Content Styling */
+.main-container {
+    display: flex;
+}
+
+/* Project Catalog Styles */
+.project-catalog {
+    display: grid;
+}
+
+.project-item {
+    background: #1f1d1d;
+    border-radius: 8px;
+    padding: 1em;
+    box-shadow: 
+    0 -1px 1px rgba(120, 209, 188, 0.2), /* Thin line at the top */
+    0 2px 3px rgba(209, 112, 112, 0.2),   /* Existing shadow on the bottom (darker) */
+    0 2px 3px rgba(165, 122, 194, 0.1); 
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-item:hover {
+    transform: translateY(-2px);  
+    box-shadow: 
+    0 -1px 1px rgba(0, 0, 0, 0.2), /* Thin line at the top */
+    0 4px 6px rgba(0, 0, 0, 0.2),   /* Existing shadow on the bottom (darker) */
+    0 4px 6px rgba(0, 0, 0, 0.1); 
+    background: linear-gradient(135deg, 
+    rgba(255, 182, 193, 0.2) 0%, /* Light Pink */
+    rgba(255, 228, 225, 0.2) 25%, /* Light Peach */
+    rgba(173, 216, 230, 0.2) 50%, /* Light Blue */
+    rgba(240, 248, 255, 0.2) 75%, /* Alice Blue */
+    rgba(144, 238, 144, 0.2) 100% /* Light Green */
+    );
+}
+
+/* Publications Styles */
+.publication-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.publications {
+    background: #2b2b2b;
+    border-radius: 8px;
+    padding: 1em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: #e0e0e0;
+}
+
+.publications a {
+    font-size: 1.2em;
+    color: #9d9d9d;
+}
+
+.publications a:hover {
+    color: #ffffff;
+}
+
+.publications .date {
+    font-size: 0.9em;
+    color: #7d7d7d;
+}
+
+/* Footer styling */
+.footer {
+    background-color: rgba(85, 85, 85, 0.85); /* Light grey with transparency */
+    color: rgba(236, 236, 236, 0.75); /* Dark grey with transparency */
+    border-top: 0.5px solid rgba(172, 172, 172, 0.6); /* Light grey border with transparency */
+}

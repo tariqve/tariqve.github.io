@@ -1,0 +1,195 @@
+/* Import all specified Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Metamorphous:wght@400;700&family=Playfair+Display:wght@400;700&family=Lora:wght@400;700&family=Cinzel:wght@400;700&family=Rokkitt:wght@400;700&family=Spectral:wght@400;700&family=Gloock:wght@400;700&family=Carter+One&display=swap');
+
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+html {
+    scrollbar-width: none; /* Firefox */
+}
+
+html, body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    line-height: 1.5;
+    overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
+/* Prevent text selection globally */
+body {
+    user-select: none; /* Standard syntax */
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    overflow: -moz-scrollbars-none; /* Firefox */
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+
+body::-webkit-scrollbar {
+    display: none; /* Safari and Chrome */
+}
+  
+a,
+button,
+[role="button"],
+[tabindex] {
+    text-decoration: none !important;
+    outline: none !important;
+    color: inherit !important;
+}
+
+a:hover,
+button:hover,
+[role="button"]:hover,
+[tabindex]:hover {
+    text-decoration: none !important;
+    outline: none !important;
+    color: inherit !important;
+}
+
+/* Global Header Styles */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.1em 4em;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    font-family: 'Cinzel', "Metamorphous", serif;
+}
+
+/* Branding Styles */
+.branding {
+    text-align: left;
+    position: relative;
+}
+
+.branding h1 {
+    margin: 0;
+    font-size: 2.4em; /* Adjust as needed for each page */
+    position: relative;
+}
+
+/* Contact Links */
+.contact {
+    text-align: right;
+}
+
+.contact a {
+    font-size: 1.5em; /* Adjust as needed for each page */
+    margin-left: 15px;
+}
+
+/* Floating Photo Styles */
+.floating-photo {
+    position: absolute;
+    top: 30%; /* Adjust as needed for each page */
+    transform: translate(-50%, -50%) rotate(-25deg);
+    opacity: 0.05;
+    z-index: 100;
+    left: 20%;
+    overflow: hidden;
+    pointer-events: none;
+    max-width: 100px; /* Adjust as needed for each page */
+    max-height: 100px;
+    animation: opacityAnimation 8s ease-in-out infinite;
+}
+
+/* Keyframes for opacity animation */
+@keyframes opacityAnimation {
+    0%, 100% { opacity: 0.05; }
+    25% { opacity: 0.1; }
+    50% { opacity: 0.02; }
+    75% { opacity: 0.15; }
+}
+
+/* Main Content Styling */
+.main-container {
+    display: flex;
+    padding: 1em 2em 1em 15%;
+    margin: 0; /* Leave 25% space from the left side */
+    z-index: 1;
+    position: relative;
+    flex: 1; /* Takes up remaining space */
+    flex-direction: column;
+}
+
+/* Introduction Styling */
+.introduction {
+    padding: 0.5em 1em;
+    z-index: 1;
+    position: relative;
+    margin-top: 1em;
+  }
+
+  /* Project Catalog */
+.project-catalog {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    gap: 1em;
+    box-sizing: border-box; /* Include padding and border in width calculation */
+  }
+
+  
+/* Footer styling */
+.footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: left;
+    padding: 5px 50px;
+    font-size: 0.7em;
+}
+
+
+
+/* Tablet Styles (Portrait) */
+@media (max-width: 650px) {
+  
+    .header {
+        flex-direction: column;
+    }
+  
+    .branding,
+    .contact {
+        text-align: center;
+        width: 100%;
+    }
+  
+    .main-content {
+        flex-direction: column;
+        align-items: center;
+    }
+  
+    .portfolio-links-container {
+        width: 90%;
+        margin-bottom: 1em; /* Add margin for spacing */
+    }
+  
+    .portfolio-links ul li {
+        display: block;
+    }
+  
+    .portfolio-links-container,
+    .right-section {
+        width: 100%;
+    }
+  
+    .right-section {
+        width: 100%;
+    }
+    
+    .floating-photo {
+        top: 90%; /* Adjust as needed for each page */
+        left: 10%;
+    }
+}
