@@ -58,12 +58,13 @@ button:hover,
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.1em 4em;
+    padding: 0.3em 4em;
     position: sticky;
     top: 0;
     width: 100%;
     z-index: 10;
     font-family: 'Cinzel', "Metamorphous", serif;
+    backdrop-filter: blur(100px);;
 }
 
 /* Branding Styles */
@@ -91,15 +92,15 @@ button:hover,
 /* Floating Photo Styles */
 .floating-photo {
     position: absolute;
-    top: 30%; /* Adjust as needed for each page */
+    top: 10%; /* Adjust as needed for each page */
     transform: translate(-50%, -50%) rotate(-25deg);
     opacity: 0.05;
-    z-index: 100;
-    left: 20%;
+    z-index: 10;
+    left: 21%;
     overflow: hidden;
     pointer-events: none;
-    max-width: 100px; /* Adjust as needed for each page */
-    max-height: 100px;
+    max-width: 75px;
+    max-width: 75px;
     animation: opacityAnimation 8s ease-in-out infinite;
 }
 
@@ -154,17 +155,12 @@ button:hover,
 
 /* Tablet Styles (Portrait) */
 @media (max-width: 650px) {
-  
-    .header {
-        flex-direction: column;
+ 
+    .body {
+        overflow-x: hidden;
+        font-size: 10px;
     }
-  
-    .branding,
-    .contact {
-        text-align: center;
-        width: 100%;
-    }
-  
+
     .main-content {
         flex-direction: column;
         align-items: center;
@@ -172,7 +168,7 @@ button:hover,
   
     .portfolio-links-container {
         width: 90%;
-        margin-bottom: 1em; /* Add margin for spacing */
+        margin-bottom: 1em; 
     }
   
     .portfolio-links ul li {
@@ -192,4 +188,91 @@ button:hover,
         top: 90%; /* Adjust as needed for each page */
         left: 10%;
     }
+    .contact {
+        display: none; /* Hide contact links on mobile */
+    }
+    .menu-toggle {
+        display: block; /* Show hamburger menu button on mobile */
+    }
+}
+
+
+
+/* General Header Styling */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.3em 4em;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    font-family: 'Cinzel', "Metamorphous", serif;
+}
+
+/* Branding Styles */
+.branding {
+    text-align: left;
+    position: relative;
+}
+
+.branding h1 {
+    margin: 0;
+    font-size: 2.4em; /* Adjust as needed for each page */
+    position: relative;
+}
+
+/* Contact Links */
+.contact {
+    text-align: right;
+}
+
+/* Hide default contact link on mobile */
+.contact a {
+    font-size: 1.5em;
+    margin-left: 15px;
+}
+
+/* Hamburger Menu Styles */
+.menu-toggle {
+    display: none;
+    font-size: 2em;
+    cursor: pointer;
+    z-index: 10000;
+    color: rgb(0, 0, 0);
+}
+
+/* Menu Overlay Styles */
+.menu-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    padding: 2em;
+    box-sizing: border-box;
+}
+
+.menu-overlay a {
+    display: block;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 2em;
+    margin: 1em 0;
+    z-index: 1000;
+}
+
+/* Close Button Styles */
+.close-btn {
+    font-size: 2em;
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+    z-index: 1000;;
 }
